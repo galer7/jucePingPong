@@ -37,11 +37,6 @@ public:
 
     void processBlock (AudioBuffer<float>&, MidiBuffer&) override;
 
-	void fillDelayBuffer(int channel, const int bufferLength, const int delayBufferLength, const float * bufferData, const float * delayBufferData);
-
-	void getFromDelayBuffer(AudioBuffer<float>, int channel, const int bufferLength, const int delayBufferLength, const float * bufferData, const float * delayBufferData);
-
-	void feedbackDelay(int channel, const int bufferLength, const int delayBufferLength, const float * bufferData, const float * delayBufferData, float * dryBuffer);
 
     //==============================================================================
     AudioProcessorEditor* createEditor() override;
@@ -66,18 +61,36 @@ public:
     void getStateInformation (MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
-	enum Parameters { gain = 0, totalNumParam };
 	bool NeedsUIUpdate() { return UIUpdateFlag; };
 	void RequestUIUpdate() { UIUpdateFlag = true; };
 	void ClearUIUpdateFlag() { UIUpdateFlag = false; };
 
-private:
+	int lastUIWidth, lastUIHeight;
 
-	AudioBuffer<float> myDelayBuffer;
-	int mWritePosition = 0;
-	int mSampleRate = 44100; 
+	enum Parameters
+	{
+		gainParam = 0,
+		delayLengthParam,
+		dryMixParam,
+		wetMixParam,
+		feedbackParam,
+		numParameters
+	};
+
+	float gain;
+	float delayLength;
+	float dryMix;
+	float wetMix;
+	float feedback;
+
+private:
+	// circular buffer variables
+	AudioSampleBuffer delayBuffer;
+	int delayReadPosition;
+	int delayWritePosition;
+	int delayBufferSize = 100000000;
+	int delayBufferLength = delayBufferSize + 100;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PingPong2AudioProcessor)
-	float UserParams[totalNumParam];
 	bool UIUpdateFlag; //Valoare booleana pentru reimprospatarea interfetei grafice
 };
