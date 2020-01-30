@@ -13,9 +13,9 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "FileDescription",  "PingPong2\0"
+      VALUE "FileDescription",  "PingPong\0"
       VALUE "FileVersion",  "1.0.0\0"
-      VALUE "ProductName",  "PingPong2\0"
+      VALUE "ProductName",  "PingPong\0"
       VALUE "ProductVersion",  "1.0.0\0"
     END
   END

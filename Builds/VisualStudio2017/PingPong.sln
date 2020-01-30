@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2017
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPong - Standalone Plugin", "PingPong_StandalonePlugin.vcxproj", "{D85CBA54-6292-75D1-00E4-946427EE6DA7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8} = {44F77091-20CF-9AE3-7C7D-A76AD48758D8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPong - VST3", "PingPong_VST3.vcxproj", "{BA0AAE44-04DC-60B3-1842-214DD87E2C0A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8} = {44F77091-20CF-9AE3-7C7D-A76AD48758D8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PingPong - Shared Code", "PingPong_SharedCode.vcxproj", "{44F77091-20CF-9AE3-7C7D-A76AD48758D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA0AAE44-04DC-60B3-1842-214DD87E2C0A}.Debug|x64.ActiveCfg = Debug|x64
+		{BA0AAE44-04DC-60B3-1842-214DD87E2C0A}.Debug|x64.Build.0 = Debug|x64
+		{BA0AAE44-04DC-60B3-1842-214DD87E2C0A}.Release|x64.ActiveCfg = Release|x64
+		{BA0AAE44-04DC-60B3-1842-214DD87E2C0A}.Release|x64.Build.0 = Release|x64
+		{D85CBA54-6292-75D1-00E4-946427EE6DA7}.Debug|x64.ActiveCfg = Debug|x64
+		{D85CBA54-6292-75D1-00E4-946427EE6DA7}.Debug|x64.Build.0 = Debug|x64
+		{D85CBA54-6292-75D1-00E4-946427EE6DA7}.Release|x64.ActiveCfg = Release|x64
+		{D85CBA54-6292-75D1-00E4-946427EE6DA7}.Release|x64.Build.0 = Release|x64
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8}.Debug|x64.ActiveCfg = Debug|x64
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8}.Debug|x64.Build.0 = Debug|x64
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8}.Release|x64.ActiveCfg = Release|x64
+		{44F77091-20CF-9AE3-7C7D-A76AD48758D8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

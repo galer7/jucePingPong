@@ -2,11 +2,11 @@
 
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="PingPong2\Source">
-      <UniqueIdentifier>{4BF37252-2F5E-A4C4-6C03-59F72D15228B}</UniqueIdentifier>
+    <Filter Include="PingPong\Source">
+      <UniqueIdentifier>{5390C738-CED8-667C-070D-49936E7FC3EE}</UniqueIdentifier>
     </Filter>
-    <Filter Include="PingPong2">
-      <UniqueIdentifier>{BA3E2FCD-1164-02F1-D090-A9438EFC7430}</UniqueIdentifier>
+    <Filter Include="PingPong">
+      <UniqueIdentifier>{C0A6DE1A-58DD-B03F-87A9-A05E33356975}</UniqueIdentifier>
     </Filter>
     <Filter Include="JUCE Modules\juce_audio_basics\audio_play_head">
       <UniqueIdentifier>{EB58F05A-A968-CEBE-40C4-107CDD8F240F}</UniqueIdentifier>
@@ -434,10 +434,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
-      <Filter>PingPong2\Source</Filter>
+      <Filter>PingPong\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\PluginEditor.cpp">
-      <Filter>PingPong2\Source</Filter>
+      <Filter>PingPong\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <Filter>JUCE Modules\juce_audio_basics\buffers</Filter>
@@ -2431,10 +2431,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
-      <Filter>PingPong2\Source</Filter>
+      <Filter>PingPong\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\PluginEditor.h">
-      <Filter>PingPong2\Source</Filter>
+      <Filter>PingPong\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>
