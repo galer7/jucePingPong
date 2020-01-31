@@ -112,7 +112,7 @@ void PingPong2AudioProcessorEditor::sliderValueChanged (Slider* sliderThatWasMov
     if (sliderThatWasMoved == gainSlider.get())
     {
         //[UserSliderCode_gainSlider] -- add your slider handling code here..
-		ourProcessor->setParameter(PingPong2AudioProcessor::gain, (float)gainSlider->getValue());
+		ourProcessor->setParameter(PingPong2AudioProcessor::gainParam, (float)gainSlider->getValue());
         //[/UserSliderCode_gainSlider]
     }
 
@@ -130,7 +130,7 @@ void PingPong2AudioProcessorEditor::timerCallback()
 
 	if (ourProcessor->NeedsUIUpdate())
 	{
-		gainSlider->setValue(ourProcessor->getParameter(PingPong2AudioProcessor::gain), juce::dontSendNotification);
+		gainSlider->setValue(ourProcessor->getParameter(PingPong2AudioProcessor::gainParam), juce::dontSendNotification);
 		ourProcessor->ClearUIUpdateFlag();
 	}
 }
