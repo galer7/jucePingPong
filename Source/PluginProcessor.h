@@ -36,7 +36,10 @@ public:
    #endif
 
     void processBlock (AudioBuffer<float>&, MidiBuffer&) override;
-
+    void fillDelayBuffer(int channel, const int bufferLength, const int delayBufferLength, const float* bufferData, const float* delayBufferData);
+    void getFromDelayBuffer(AudioBuffer<float> buffer, int channel, const int bufferLength, const int delayBufferLength, const float* bufferData, const float* delayBufferData);
+    void feedbackDelay(int channel, const int bufferLength, const int delayBufferLength, const float* bufferData, const float* delayBufferData, float* dryBuffer);
+    AudioBuffer<float> mDelayBuffer;
 
     //==============================================================================
     AudioProcessorEditor* createEditor() override;
@@ -85,11 +88,9 @@ public:
 
 private:
 	// circular buffer variables
-	AudioSampleBuffer delayBuffer;
-	int delayReadPosition;
-	int delayWritePosition;
-	int delayBufferSize = 100000000;
-	int delayBufferLength = delayBufferSize + 100;
+	AudioBuffer<float> myDelayBuffer;
+    int mWritePosition = 0;
+    int mSampleRate;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PingPong2AudioProcessor)
 	bool UIUpdateFlag; //Valoare booleana pentru reimprospatarea interfetei grafice
